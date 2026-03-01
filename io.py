@@ -1,3 +1,20 @@
+import pandas as pd
+from data.info import column_to_name
+
+# outputs info on a given country
+def output_country_info(df, country: str, columns_needed: list):
+    print(f"\nHere is the information on the country {country.title()}!")
+
+    for column in columns_needed:
+        info_category = column_to_name[column]
+        info = df.loc[df["Country"] == country, column].iloc[0]
+
+        # making sure info isn't empty
+        if pd.isnull(info):
+            continue
+
+        print(f"\n\n{info_category}: {info}")
+
 # This function will handle all user input
 def get_input(df):
     print("Welcome to the automated country profile generator!\n")

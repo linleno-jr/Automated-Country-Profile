@@ -1,4 +1,38 @@
-import pandas as pd
+columns_needed = [
+    "Government: Country name - conventional long form",
+    "Government: Capital - name",
+    "Geography: Climate",
+    "Geography: Terrain",
+    "Geography: Coastline",
+    "Environment: Environment - current issues",
+    "Environment: Environment - international agreements - party to",
+    "Geography: Location",
+    "Geography: Map references",
+    "Geography: Area - comparative",
+    "Government: Government type",
+    "Government: Independence",
+    "Government: International organization participation",
+    "Military and Security: Military expenditures",
+    "People and Society: Ethnic groups",
+    "People and Society: Languages",
+    "People and Society: Religions",
+    "People and Society: Infant mortality rate - total",
+    "People and Society: Life expectancy at birth - total population",
+    "People and Society: Population growth rate",
+    "People and Society: Population distribution",
+    "People and Society: Literacy - male",
+    "People and Society: Literacy - female",
+    "People and Society: Median age - total",
+    "People and Society: Net migration rate",
+    "Transnational Issues: Refugees and internally displaced persons - refugees (country of origin)",
+    "Economy: GDP (official exchange rate)",
+    "Economy: Real GDP per capita",
+    "Geography: Natural resources",
+    "Economy: Exports - commodities",
+    "Economy: Exports - partners",
+    "Economy: Imports - commodities",
+    "Economy: Imports - partners",
+]
 
 column_to_name = {
     "Government: Country name - conventional long form": "Official Name of Country",
@@ -35,17 +69,3 @@ column_to_name = {
     "Economy: Imports - commodities": "Import Commodities",
     "Economy: Imports - partners": "Import Partners",
 }
-
-# outputs info on a given country
-def output_country_info(df, country: str, columns_needed: list):
-    print(f"\nHere is the information on the country {country.title()}!")
-
-    for column in columns_needed:
-        info_category = column_to_name[column]
-        info = df.loc[df["Country"] == country, column].iloc[0]
-
-        # making sure info isn't empty
-        if pd.isnull(info):
-            continue
-
-        print(f"\n\n{info_category}: {info}")
