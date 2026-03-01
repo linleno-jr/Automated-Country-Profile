@@ -24,7 +24,7 @@ def get_input(df):
     topic = input("\nWhat is your topic? ")
 
     while True:
-        country = input("\nWhat is your country? ")
+        country = input("\nWhat is your country? ").lower();
 
         # making sure user's country is valid
         if country.lower() in df["Country"].values:

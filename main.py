@@ -1,5 +1,5 @@
 import pandas as pd
-from io import output_country_info, get_input
+from country_io import output_country_info, get_input
 from data.info import columns_needed
 
 # creating a data frame from csv
