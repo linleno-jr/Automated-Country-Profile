@@ -1,3 +1,5 @@
+import pandas as pd
+
 column_to_name = {
     "Government: Country name - conventional long form": "Official Name of Country",
     "Government: Capital - name": "Capital",
@@ -43,7 +45,7 @@ def output_country_info(df, country: str, columns_needed: list):
         info = df.loc[df["Country"] == country, column].iloc[0]
 
         # making sure info isn't empty
-        if info == "":
+        if pd.isnull(info):
             continue
 
         print(f"\n\n{info_category}: {info}")
