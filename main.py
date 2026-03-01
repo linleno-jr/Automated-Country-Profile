@@ -1,5 +1,4 @@
 import pandas as pd
-from docx import Document
 from input import get_input
 from output import output_country_info
 
