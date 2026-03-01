@@ -4,7 +4,7 @@ from input import get_input
 from output import output_country_info
 
 # creating a data frame from csv
-df = pd.read_csv("filtered_countries.csv")
+df = pd.read_csv("data/filtered_countries.csv")
 
 # converting country names in data frame to lowercase
 df["Country"] = df["Country"].str.lower()
