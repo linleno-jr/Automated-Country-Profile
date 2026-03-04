@@ -9,7 +9,6 @@ This program was written in Python 3, using the pandas library to handle data. I
 ## Program Limitations ##
 The program currently cannot answer:
  - question 7
- - amount arable land on question 18
  - question 20
  - human trafficking issues on question 16
  - the map on question 3
