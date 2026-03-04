@@ -19,8 +19,6 @@ The program currently cannot answer:
  - question 6
  - question 9 
  - or the relative size in region in question 3c
- 
- It should also be noted that the user should read over the automated document to make sure it is accurate.
 
 ## List of countries included ##
 - Afghanistan
