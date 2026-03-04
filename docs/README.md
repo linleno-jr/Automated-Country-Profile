@@ -3,6 +3,9 @@
 ## Description ##
 This program provides information on various countries to help MUN delegates write their country profiles. It allows the user to search for a country by name and receive much of the information they will need to understand the country's background.
 
+## Download Instructions ##
+Download the latest release [here](https://github.com/linleno-jr/Automated-Country-Profile/releases/tag/v1.0.0), preferably the zip file. This will allow you to run the code with a Python interpreter if you are on macOS, Windows, or Linux. You might have to install dependencies (especially the Python pandas library) first. If you are on a browser, you can run the code using [replit](replit.com). It will allow you to create an app through uploading a zip file. Then, you can go into the app and open a shell. From there, first run pip install pandas, and then you will be able to run the program if you go into the directory where main.py is located (type "cd directory_name") with "python3 main.py".
+
 ## Built With ##
 This program was written in Python 3, using the pandas library to handle data. It uses information coming from the dataset linked [here](https://www.kaggle.com/datasets/lucafrance/the-world-factbook-by-cia), which is a copy of the CIA World Factbook last updated March 14, 2025.
 
